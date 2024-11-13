@@ -1,0 +1,36 @@
+.wrap form {
+    margin-bottom: 20px;
+}
+
+.wrap label {
+    display: block;
+    margin: 5px 0 2px;
+}
+
+.wrap input[type="text"],
+.wrap input[type="date"],
+.wrap textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.wrap button {
+    padding: 5px 10px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.wrap button:hover {
+    background-color: #005177;
+}
+
+.wrap table {
+    width: 100%;
+    margin-top: 20px;
+}
+.wrap th {
+    text-align: left;
+}

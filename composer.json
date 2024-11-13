@@ -1,0 +1,11 @@
+{
+    "require": {
+        "typesense/typesense-php": "^4.9",
+        "symfony/http-client": "^7.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
