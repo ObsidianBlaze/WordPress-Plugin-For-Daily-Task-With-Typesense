@@ -2,9 +2,6 @@
 // Exit if accessed directly
 if (!defined('ABSPATH')) exit;
 
-// Include the Typesense PHP client library if you have it via Composer
-// require_once plugin_dir_path(__FILE__) . '../vendor/autoload.php';
-
 use Typesense\Client;
 
 /**
@@ -37,31 +34,6 @@ function dtt_get_typesense_client() {
 /**
  * Add a task to the Typesense collection.
  */
-//function dtt_create_task($title, $description, $due_date) {
-//    $client = dtt_get_typesense_client();
-//
-//    // Define task data to be added to Typesense
-//    $task_data = [
-//        'id' => uniqid(),                // Unique ID for the task
-//        'title' => $title,
-//        'description' => $description,
-//        'due_date' => $due_date
-//    ];
-//
-//    // Ensure the collection exists, create if it doesn't
-//    try {
-//        $client->collections['tasks'];
-//    } catch (Exception $e) {
-//        dtt_create_typesense_collection();
-//    }
-//
-//    // Add task document to the Typesense collection
-//    try {
-//        $client->collections['tasks']->documents->create($task_data);
-//    } catch (Exception $e) {
-//        error_log('Error adding task to Typesense: ' . $e->getMessage());
-//    }
-//}
 
 /**
  * Create the Typesense collection for tasks if it doesn't exist.
@@ -89,20 +61,6 @@ function dtt_create_typesense_collection() {
 /**
  * Search tasks in the Typesense collection.
  */
-//function dtt_search_tasks($query) {
-//    $client = dtt_get_typesense_client();
-//
-//    try {
-//        $results = $client->collections['tasks']->documents->search([
-//            'q' => $query,
-//            'query_by' => 'title,description'
-//        ]);
-//        return $results;
-//    } catch (Exception $e) {
-//        error_log('Error searching tasks in Typesense: ' . $e->getMessage());
-//        return [];
-//    }
-//}
 
 function dtt_get_tasks_from_typesense($searchQuery = '') {
     $client = dtt_get_typesense_client();

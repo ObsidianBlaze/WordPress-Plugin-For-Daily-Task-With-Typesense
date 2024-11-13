@@ -30,24 +30,15 @@ add_action('admin_enqueue_scripts', 'dtt_enqueue_admin_styles');
 
 add_action('admin_init', 'dtt_register_settings');
 
-
 add_action('admin_menu', 'dtt_add_settings_menu');
 
 add_action('admin_menu', 'dtt_register_admin_page');
-
-//function dtt_enqueue_admin_styles($hook) {
-//    if ($hook != 'toplevel_page_dtt-view-tasks') {
-//        return;
-//    }
-//    wp_enqueue_style('dtt-admin-styles', plugin_dir_url(__FILE__) . 'css/admin-styles.css');
-//}
 
 function dtt_register_settings() {
     register_setting('dtt_settings', 'dtt_typesense_api_key');
     register_setting('dtt_settings', 'dtt_typesense_host');
     register_setting('dtt_settings', 'dtt_typesense_port');
 }
-
 
 function dtt_register_admin_page() {
     add_menu_page(
@@ -115,7 +106,6 @@ function dtt_add_admin_menu() {
 function dtt_enqueue_admin_styles() {
     wp_enqueue_style('dtt-admin-style', plugins_url('css/admin-style.css', __FILE__));
 }
-
 
 function dtt_add_settings_menu() {
     add_options_page(
